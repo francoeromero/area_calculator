@@ -4,6 +4,7 @@ const widthInput = document.getElementById('width');
 const unitSelect = document.getElementById('unit');
 const calculateButton = document.getElementById('calculate');
 const resultDiv = document.getElementById('result');
+const terrenoDiv = document.getElementById('terreno');
 
 // Función para calcular el área
 function calculateArea() {
@@ -12,8 +13,15 @@ function calculateArea() {
   const unit = unitSelect.value;
   
   // Realizar el cálculo del área
-  const area = length * width;
+  let area;
+  if(isNaN(length) && isNaN(width)){
+    area = 0;
+  }
+  else{
+    area = length * width;
+  }
 
+  // si se pasa en cm
   let area_convert;
 
   if(unit == 'cm²'){
@@ -24,6 +32,10 @@ function calculateArea() {
   
   // Mostrar el resultado
   resultDiv.textContent = `El área del terreno es: ${area_convert} ${unit}`;
+
+  // planta del terreno
+  terrenoDiv.style.width = length + 'rem';
+  terrenoDiv.style.height = width + 'rem';
 }
 
 // Agregar el evento click al botón de cálculo
