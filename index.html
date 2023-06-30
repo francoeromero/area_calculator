@@ -51,6 +51,13 @@
       border: 2px solid black;
       max-width: 80%;
       max-height: 50vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .longitud{
+      display: flex;
     }
   </style>
 </head>
@@ -73,7 +80,10 @@
   </div>
   <button id="calculate">Calcular</button>
   <div id="result"></div>
-  <div class="terreno" id="terreno"></div>
+  <div class="terreno" id="terreno">
+    <div class="ancho" id="ancho"></div>
+  </div>
+  <div class="longitud" id="longitud"></div>
   <script src="script.js"></script>
 </body>
 </html>

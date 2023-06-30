@@ -5,6 +5,8 @@ const unitSelect = document.getElementById('unit');
 const calculateButton = document.getElementById('calculate');
 const resultDiv = document.getElementById('result');
 const terrenoDiv = document.getElementById('terreno');
+const numAncho = document.getElementById('ancho');
+const numLongitud = document.getElementById('longitud');
 
 // Función para calcular el área
 function calculateArea() {
@@ -32,10 +34,13 @@ function calculateArea() {
   
   // Mostrar el resultado
   resultDiv.textContent = `El área del terreno es: ${area_convert} ${unit}`;
-
   // planta del terreno
   terrenoDiv.style.width = length + 'rem';
   terrenoDiv.style.height = width + 'rem';
+  // numeritos en la planta
+  numAncho.textContent = width;
+  numLongitud.textContent = length;
+
 }
 
 // Agregar el evento click al botón de cálculo
