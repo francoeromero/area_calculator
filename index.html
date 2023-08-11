@@ -76,7 +76,7 @@
       margin-bottom: 200px;
       width: 25rem;
       height: 100%;
-      background: gray;
+      background: rgb(113, 113, 113);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -86,10 +86,57 @@
       border-radius: 20px;
 
     }
-  </style>
+    .content-circle{
+      display: flex;
+      width: 100%;
+    }
+    .circle{
+      width: 1rem;
+      margin-right: 8px;
+      height: 1rem;
+      border-radius: 50%;
+    }
+    .rojo{
+      background: #f05b5b;
+    }
+    .amarillo{
+      background: #f9d959;
+    }
+    .verde{
+      background: #4CAF50;
+    }
+    .content-name{
+      width: 100%;
+      height: 1rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .name{
+      font-size: 1rem;
+    }
+    .rotulo{
+      display: flex;
+      /* border: 2px solid red; */
+      width: 100%;
+      margin-top: -.5rem;
+      margin-bottom: 2rem;
+      
+    }
+    </style>
 </head>
 <body>
   <section class="container">
+    <div class="rotulo">
+      <div class="content-circle">
+        <div class="circle rojo"></div>
+        <div class="circle amarillo"></div>
+        <div class="circle verde"></div>
+      </div>
+      <div class="content-name">
+        <p class="name">@francoeromero</p>
+      </div>
+    </div>
+
     <h1>Calculadora de Área de Terreno</h1>
     <div class="input-container">
       <label for="length">Longitud:</label>
